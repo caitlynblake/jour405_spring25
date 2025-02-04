@@ -32,7 +32,7 @@ umd_fees_pct <- umd_fees |> mutate(pct_change = (`Fall 2024` - `Fall 2021`)/ `Fa
 
 Write a few sentences about what you found in the data. What's the story here?
 
-Fees for everything except athletics has gone up. Student sustainability has risen the most out of all of the categories. It has gone up by 150% between 2021 an 2024.
+Fees for everything except athletics has gone up. Student sustainability has risen the most out of all of the categories. It has gone up by 150% between 2021 and 2024.
 
 
 
