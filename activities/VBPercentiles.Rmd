@@ -7,7 +7,7 @@ We'll be calculating percentiles to see how good Maryland was in service aces in
 ### Task 1: Load the tidyverse
 
 ```{r}
-library(tidyversy)
+library(tidyverse)
 ```
 
 ### Task 2: Load the data
