@@ -60,6 +60,21 @@ Ocean City - the unexpected crime capitol in Maryland.
 
 Although Baltimore is often seen as a dangerous place riddled with crime, there have been major leaps in crime reduction. On the other hand, Ocean City's violent and property crime rates are on the rise. Between 2019 and 2020 Baltimore's violent crime rate decreased by 12.88%, while Ocean City increased by a whopping 82.89%. 
 
+
 ### Task 9: Save Your Work and Put it on GitHub
 
 Save this notebook, then commit it to your local repository. Push the changes to your GitHub repository and submit the URL for this file in ELMS.
+
+### Task 10: Percentiles
+
+Using the 2020 violent crime rate, calculate the percentiles using `ntile()`. Save the results to a new dataframe called `md_cities_percentiles`. How many cities are above the 90th percentile?
+Calculate the Interquartile Range of the 2020 violent crime rate using `summarize()` and R's `IQR()` function. The syntax is similar to how `mean()` works.
+Do the results change your best story idea from the previous assignment? Why or why not?
+
+```{r}
+md_percentiles <- md_cities_rates |> mutate(percentile = ntile(violent_rate_2020, 100))
+
+md_percentiles |>  summarize(IQR_violent_crime_rate_2020 = IQR(violent_rate_2020, na.rm = TRUE))
+```
+
+The IQR rate is 41.99 but I am not sure what that means for the data. I wanted to turn something in before midnight, I will resubmit when I figure it out.
