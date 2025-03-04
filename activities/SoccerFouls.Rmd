@@ -33,7 +33,8 @@ small number = almost no relationship
 ```{r}
 matches |> 
   ggplot() +
-  geom_point(aes(x=goal_diff, y=fouls))
+  geom_point(aes(x=goal_diff, y=fouls)) +
+  geom_smooth(aes(x=goal_diff, y=fouls), method= "lm")
 
 
 ```
@@ -41,7 +42,7 @@ matches |>
 
 ### Task 6: Describe the results of both the correlation calculation and the scatterplot.
 
-There is close to no correlation between fouls and goal diff. 
+There is close to no correlation between fouls and goal diff. The correlation is 0.018 which is extremely low. 
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
