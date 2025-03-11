@@ -57,7 +57,7 @@ hs_sports |> summarize(correlation = cor(boys, girls, method = "pearson"))
 
 total <- hs_sports |> mutate(boys+girls)
 
-#I'm sorry I dont know how to do the rest I tried :(
+#I'm sorry I don't know how to do the rest I tried :(
 ```
 
 
@@ -112,7 +112,7 @@ car_thefts <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/h
 ```{r}
 
 ```
-I'm sorry I tried I am very confused
+I'm sorry I tried I am very confused 
 ```
 
 ## Part 5: Data Analysis Scenario (20 points)
