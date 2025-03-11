@@ -127,7 +127,7 @@ I would calculate the average response times for each month in the past 2 years 
 A scatterplot. This will allow us to see how bad the response times are and how frequently the responses are delayed. 
 
 3. What additional context or data would you need to make this a complete story? (5 points)
-Possibly statistics on staffing, if there is understaffing issues this may be a variable. 
+Possibly statistics on staffing, if there is understaffing issues this may be a variable. Also which months have lower response times and how does this correlate to the amount of crime occurring. Are there lower response times in the summer because of the higher volume of crime?
 
 
 ### Submission Instructions
