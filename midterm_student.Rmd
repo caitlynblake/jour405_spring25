@@ -83,12 +83,15 @@ dc_bus |> summarise(mean = mean(bus), sd = sd(bus))
 ```{r}
 sample_5 <- dc_bus |> 
   sample_n(5)
+
+sample_25 <- dc_bus |> 
+  sample_n(25)
 ```
 
 ```{r}
 dc_bus |> summarise(mean = mean(rail), sd = sd(rail))
 ```
-Friday is a popular day for bus and rail riders, but there are more bus riders that day. The bus is more popular than rail on average. The bus has a lower standard deciation value - 88486.88, while the rail has a higher sd - 100164.3. 
+Weekdays seem to have a higher ridership on bus and rail than the weekend. I am assuming this is due to people traveling to work. On those days, the rail often has a higher ridership. This may be a more effecient way for workers to commute, rather than changing buses constantly. The rail has a higher standard deviation meaning that there is more variance in the rail data than the bus data. The mean is also higher for rail proving that more people use the rail on average.
 
 
 
