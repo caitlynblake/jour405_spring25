@@ -165,6 +165,5 @@ print(conclusion)
   
   After disucssion the results, each person writes a couple of sentences for the top of a story about local officials' claims on the impact of the transit line and what the data says. Remember that there are lots of possible reasons that could influence the price of a home. Make your sentences newsy.
   
-Statistical evidence supports a claim that a new light rail line has increased local property values. 
+Local officials claim that the construction of a new light rail has increased property values. Statistical evidence supports the claim after data showed that home sales are higher than the previous average.
 
--- I am confused as to what the upper/lower bound stats mean, I looked it up but not sure what it means here
