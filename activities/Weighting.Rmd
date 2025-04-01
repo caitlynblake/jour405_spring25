@@ -233,5 +233,7 @@ kable(comparison, digits = 1, caption = "Difference Between Weighted and Unweigh
 Rarely/never
 
 2. How might these differences affect reporting on likely voter turnout?
+Weighted percentages could mean that some groups are over/under represented in the data, leading to reduced accuracy.
 
 3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample?
+Weighting could help counteract bias but can affect accuracy. Minorities may be under represented.
