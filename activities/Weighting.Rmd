@@ -236,4 +236,4 @@ Rarely/never
 Weighted percentages could mean that some groups are over/under represented in the data, leading to reduced accuracy.
 
 3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample?
-Weighting could help counteract bias but can affect accuracy. Minorities may be under represented.
+Weighting could help counteract bias but can affect accuracy. People who don't/are less likely to vote may be under represented.
