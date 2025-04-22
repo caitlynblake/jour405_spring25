@@ -1,0 +1,9 @@
+```{r}
+library(tidyverse)
+```
+
+
+```{r load-data}
+college_grad <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/colleges_admit_grads.csv")
+```
+
