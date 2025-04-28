@@ -1,3 +1,10 @@
+Tests I could run:
+- mean and standard deviation for tuition and graduation rates
+- linear correlation
+- Z-scores to determine outliers and compare
+- scatter plot to visualize trends
+
+
 ```{r}
 library(tidyverse)
 ```
