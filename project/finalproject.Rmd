@@ -1,5 +1,5 @@
 Tests I could run:
-- mean and standard deviation for tuition and graduation rates
+- mean and standard deviation for tuition, graduation rates, admission rates
 - linear correlation
 - Z-scores to determine outliers and compare
 - scatter plot to visualize trends
