@@ -14,3 +14,43 @@ library(tidyverse)
 college_grad <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/colleges_admit_grads.csv")
 ```
 
+```{r}
+college_grad |> summarise(mean = mean(TUITIONFEE_IN), sd = sd(TUITIONFEE_IN))
+```
+This is not giving me a value and I am not sure why
+
+```{r}
+college_grad |> summarise(mean = mean(TUITIONFEE_OUT), sd = sd(TUITIONFEE_OUT))
+```
+Same with this and I am not sure what the difference between these tuition fees are
+
+```{r}
+college_grad |> summarise(mean = mean(COSTT4_A), sd = sd(COSTT4_A))
+```
+I believe this set of data is the cost, but I am not sure what the difference of this set and the other 2 tuition sets are. Regardless, the mean is 29,298.41. And the standard deviation is 17,702.59.
+
+```{r}
+college_grad |> summarise(mean = mean(ADM_RATE), sd = sd(ADM_RATE))
+```
+No variable again
+
+```{r}
+college_grad |> summarise(mean = mean(ADM_RATE_ALL), sd = sd(ADM_RATE_ALL))
+```
+??
+
+```{r}
+college_grad |> summarize(correlation = cor(COSTT4_A, ADM_RATE, method = "pearson"))
+```
+Still no variable
+
+```{r}
+college_grad |> 
+  ggplot() +
+  geom_point(aes(x=ADM_RATE, y=COSTT4_A)) +
+  geom_smooth(aes(x=ADM_RATE, y=COSTT4_A), method= "lm")
+```
+I want to replace admission rate with graduation rate but I am having a hard time discerning where that is in the data.
+
+
+Confused about how to calculate z-scores
