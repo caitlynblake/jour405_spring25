@@ -20,7 +20,7 @@ college_grad |> summarise(mean = mean(TUITIONFEE_IN), sd = sd(TUITIONFEE_IN))
 This is not giving me a value and I am not sure why
 
 ```{r}
-college_grad |> summarise(mean = mean(TUITIONFEE_OUT), sd = sd(TUITIONFEE_OUT))
+college_grad |> summarise(mean = mean("TUITIONFEE_OUT"), sd = sd("TUITIONFEE_OUT"))
 ```
 Same with this and I am not sure what the difference between these tuition fees are
 
