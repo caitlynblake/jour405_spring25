@@ -80,7 +80,7 @@ The results from our correlation analysis show the strength of the relationships
 
 Which of these three factors - Yards Gained, Takeaways and Points Scored - have the most impact on wins? Are there any that do not seem impactful at all?
 
-Point scored has the most impact because it has the highest level of correlation. The least impactful would be Takeaways.
+Point Scored has the most impact because it has the highest level of correlation. I would take away Yards Gained.
 
 ## Using the Model (3 points)
 
