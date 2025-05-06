@@ -86,4 +86,4 @@ Point scored has the most impact because it has the highest level of correlation
 
 Without using the words "multiple regression model", describe how you could use this model to cover a team or game.
 
-I would use this to compare how the independant variables affect the dependant variables.
+I would use this to compare how the independent variables affect the dependent variables.
