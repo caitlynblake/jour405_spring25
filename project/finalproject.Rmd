@@ -1,9 +1,3 @@
-Tests I could run:
-- mean and standard deviation for tuition, graduation rates, admission rates
-- linear correlation
-- Z-scores to determine outliers and compare
-- scatter plot to visualize trends
-
 
 ```{r}
 library(tidyverse)
@@ -14,43 +8,29 @@ library(tidyverse)
 college_grad <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/colleges_admit_grads.csv")
 ```
 
-```{r}
-college_grad |> summarise(mean = mean(TUITIONFEE_IN), sd = sd(TUITIONFEE_IN))
-```
-This is not giving me a value and I am not sure why
-
-```{r}
-college_grad |> summarise(mean = mean("TUITIONFEE_OUT"), sd = sd("TUITIONFEE_OUT"))
-```
-Same with this and I am not sure what the difference between these tuition fees are
 
 ```{r}
 college_grad |> summarise(mean = mean(COSTT4_A), sd = sd(COSTT4_A))
 ```
-I believe this set of data is the cost, but I am not sure what the difference of this set and the other 2 tuition sets are. Regardless, the mean is 29,298.41. And the standard deviation is 17,702.59.
+The mean cost for attending university is $29,298.41. There are some schools that have a much higher cost, but most of the data is clustered around the mean. The standard deviation is pretty high, which proves this as well.
 
 ```{r}
-college_grad |> summarise(mean = mean(ADM_RATE), sd = sd(ADM_RATE))
+college_grad |> filter(!is.na(OMAWDP8_ALL_POOLED_SUPP)) |> summarise(mean = mean(OMAWDP8_ALL_POOLED_SUPP), sd = sd(OMAWDP8_ALL_POOLED_SUPP))
 ```
-No variable again
+The mean gradation rate across all of the universities is 49%. This is pretty low.
 
-```{r}
-college_grad |> summarise(mean = mean(ADM_RATE_ALL), sd = sd(ADM_RATE_ALL))
-```
-??
-
-```{r}
-college_grad |> summarize(correlation = cor(COSTT4_A, ADM_RATE, method = "pearson"))
-```
-Still no variable
 
 ```{r}
 college_grad |> 
   ggplot() +
-  geom_point(aes(x=ADM_RATE, y=COSTT4_A)) +
-  geom_smooth(aes(x=ADM_RATE, y=COSTT4_A), method= "lm")
+  geom_point(aes(x=OMAWDP8_ALL_POOLED_SUPP, y=COSTT4_A)) +
+  geom_smooth(aes(x=OMAWDP8_ALL_POOLED_SUPP, y=COSTT4_A), method= "lm")
 ```
-I want to replace admission rate with graduation rate but I am having a hard time discerning where that is in the data.
+Based on this graph, it does seem like there is reason to believe that higher cost does not impact graduation rate, at least not very much. The data points at the top signify higher costs, and most of them are clustered to the right which indicates higher rate of graduation. But, there is a large number of data points that are much lower, but still towards the right, indicating lower costs but still high rates of graduation. I would guess that the data points in the far top right are more prestigious schools like the ivies, of state schools. I do not believe that there is a high correlation between cost and graduation rate based on this data.
 
+```{r}
+college_grad |> summarize(correlation = cor(OMAWDP8_ALL_POOLED_SUPP, COSTT4_A, method = "pearson", use = "complete.obs"))
+```
+This test determined the correlation between the two variables. It is 66%. This is not very high, proving that the correlation between cost and graduation rate is not significant. 
 
-Confused about how to calculate z-scores
+For my story pitch I would write about how the data suggests that a higher cost/more prestigious school does not necessarily mean that there is a significantly higher rate of graduation. The correlation between the two variable is 66%, further proving this point. The scatterplot also shots many lower cost schools producing high graduation rates. I would look for outliers to help determine which schools are performing the best/worst and how that correlates with my theory. Because of the large number of data points, it may be beneficial to narrow down the data and make it less complex. 
